@@ -47,18 +47,32 @@
 // })
 // }
  streamurl = "https://api.twitch.tv/kraken/streams/",
-    userurl = "https://api.twitch.tv/kraken/users/",
+ userurl = "https://api.twitch.tv/kraken/users/",
+ arr1 = [];
 arr.forEach(function(user){
   $.getJSON(userurl + user + "?client_id=3xuge9gq2tx8oeec59bh4dudj3ozau&callback=?",function(result){
   $.getJSON(streamurl + user + "?client_id=3xuge9gq2tx8oeec59bh4dudj3ozau&callback=?",function(data){
-    console.log(data);
+
     if(data.stream == null){
-      console.log(result.name + " is offline");
+       arr1.push(user);
+      $("ul").append("<a href='https://www.twitch.tv/"+user+"'><li> " +user+ " is offline </li></a>")
     }
     else{
-      console.log(result.name + " is online");
-    }
-  })
-  });
+       var channelURL = this.stream.channel.url;
 
-})
+  $("ul").append("<a href="+channelURL+"><li>" +user+ " is online</li></a>")
+    }
+  }) // data ends
+  }); // result ends
+}); // user ends
+
+// onclick function 
+function online(arr){
+  var arg = Array.prototype.slice.call(arguments);
+  var arg2 = Array.prototype.slice.call(arg);
+  console.log(arg2);
+
+}
+online(arr1);
+
+// end onclick function
