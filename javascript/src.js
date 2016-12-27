@@ -10,11 +10,11 @@ arr.forEach(function(user){
 
     if(data.stream == null){
   
-      $("ul").append("<li class='not_active' ><a href='https://www.twitch.tv/"+user+"' > " +user+ " is offline </a></li>")
+      $("ul").append("<li class='not_active w3-animate-zoom' ><a href='https://www.twitch.tv/"+user+"' > " +user+ " is offline </a></li>")
     }
     else{
        var channelURL = data.stream.channel.url;
-  $("ul").append("<li class='active'><a href="+channelURL+" >" +user+ " is online</a></li>");
+  $("ul").append("<li class='active w3-animate-zoom'><a href="+channelURL+" >" +user+ " is online</a></li>");
     }
 
 ///////////////////////////////////// online function start
