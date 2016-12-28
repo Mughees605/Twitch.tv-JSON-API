@@ -1,6 +1,7 @@
 div.main{
     width:50%;
     margin: 0px auto;
+    color: black;
 }
 img{
     width:60px;
@@ -8,7 +9,9 @@ img{
 }
 a{
     text-decoration: none;
+    color: black;
 }
+
 li{
     margin : 20px;
     font-size: 1.5em;

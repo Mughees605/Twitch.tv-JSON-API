@@ -1,6 +1,6 @@
  $(document).ready(function(){
 
-  var arr = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+  var arr = ["ESL_SC2", "OgamingSC2", "Cretetion", "Freecodecamp", "Storbeck", "Habathcx", "RobotCaleb", "Noobs2ninjas"];
   streamurl = "https://api.twitch.tv/kraken/streams/",
   userurl = "https://api.twitch.tv/kraken/users/",
  
@@ -10,7 +10,7 @@ arr.forEach(function(user){
 
     if(data.stream == null){
   
-      $("ul").append("<li class='not_active' class = 'w3-padding-32'><a href='https://www.twitch.tv/"+user+"' > " +user+ " is offline </a></li>")
+      $("ul").append("<li class='not_active' ><a href='https://www.twitch.tv/"+user+"' > " +user+ " is offline </a></li>")
     }
     else{
        var channelURL = data.stream.channel.url;
